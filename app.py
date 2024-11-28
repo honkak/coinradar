@@ -8,9 +8,11 @@ import requests
 from datetime import datetime, timedelta
 from telegram import Bot
 
+# Streamlit Secrets에서 민감한 정보 불러오기
+TELEGRAM_BOT_TOKEN = st.secrets["telegram"]["TELEGRAM_BOT_TOKEN"]
+CHAT_ID = st.secrets["telegram"]["CHAT_ID"]
+
 # 텔레그램 봇 설정
-TELEGRAM_BOT_TOKEN = "your_telegram_bot_token"  # 텔레그램 봇 토큰
-CHAT_ID = "your_chat_id"  # 텔레그램 채팅 ID
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
 
 # 업비트 API에서 데이터 가져오기
